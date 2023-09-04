@@ -1,6 +1,8 @@
 {
     "dependencies": {
+        "cors": "^2.8.5",
         "fastify": "^3.29.5",
+        "fastify-cors": "^6.1.0",
         "fastify-swagger": "^5.2.0",
         "knex": "^2.5.1",
         "mssql": "^9.2.0",

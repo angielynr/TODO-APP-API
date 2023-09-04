@@ -1,6 +1,7 @@
 const fastify = require("fastify")({ logger: true });
 const fastifySwagger = require("fastify-swagger");
 const routes = require("./lib/routes/todos");
+const cors = require("fastify-cors");
 
 const PORT = 5000;
 
@@ -13,6 +14,11 @@ const serverOptions = {
 };
 
 fastify.register(fastifySwagger, serverOptions);
+
+fastify.register(cors, {
+    origin: "*",
+    methods: ["GET", "PUT", "POST", "DELETE"],
+});
 
 fastify.register(routes);
 
