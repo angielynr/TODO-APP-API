@@ -1,0 +1,21 @@
+{
+    "dependencies": {
+        "fastify": "^3.29.5",
+        "fastify-swagger": "^5.2.0",
+        "knex": "^2.5.1",
+        "mssql": "^9.2.0",
+        "tedious": "^16.4.0",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "scripts": {
+        "start": "node server",
+        "dev": "nodemon server",
+        "make": "knex migrate:make",
+        "migrate": "knex migrate:latest --env development",
+        "seed:make": "knex seed:make",
+        "seed:run": "knex seed:run --env development"
+    }
+}
