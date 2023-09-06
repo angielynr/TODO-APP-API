@@ -26,3 +26,5 @@ module.exports = {
         },
     },
 };
+
+//SQL Query Builder for JS
