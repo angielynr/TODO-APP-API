@@ -2,8 +2,11 @@ const fastify = require("fastify")({ logger: true });
 const fastifySwagger = require("fastify-swagger");
 const routes = require("./lib/routes/todos");
 const cors = require("fastify-cors");
+const dotenv = require("dotenv");
 
-const PORT = 5000;
+dotenv.config();
+
+const PORT = process.env.API_PORT;
 
 const serverOptions = {
     exposeRoute: true,
